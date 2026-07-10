@@ -10,9 +10,10 @@ import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
 	(1) Add texture to floor
 	(2) Connect floor tilt to arrow / wasd keys
 	(3) Find new env map, preferably a bar scene
-	(4) Add game mechanics (Countdown, melting ice effect, levels, etc.)
-	(5) Fix THREE.Clock -> THREE.Timer error
-	(6) Add visual way to control the floor, like face/head or hands. 
+	(4) Add melting ice effect, like the water trail when the ice cube slides
+	(5) Add game mechanics (Countdown, melting ice effect, levels, etc.)
+	(6) Fix THREE.Clock -> THREE.Timer error
+	(7) Add visual way to control the floor, like face/head or hands. 
  */
 
 /**
@@ -95,7 +96,7 @@ const specTexture = textureLoader.load("/textures/ice_specularity.jpg");
 
 const hdrLoader = new HDRLoader();
 hdrLoader.load(
-	"./environmentMaps/glasshouse_interior_4k.hdr",
+	"./environmentMaps/glasshouse_interior.hdr",
 	(environmentMap) => {
 		environmentMap.mapping = THREE.EquirectangularReflectionMapping;
 		scene.background = environmentMap;
