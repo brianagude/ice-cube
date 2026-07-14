@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Ice Cube</title>
     <style>
       body { margin: 0; }
     </style>
   </head>
   <body>
+    <div class="game-controls">
+      <button id="btn-up">up</button>
+      <div class="bottom-row">
+        <button id="btn-left">left</button>
+        <button id="btn-down">down</button>
+        <button id="btn-right">right</button>
+      </div>
+    </div>
     <canvas class="webgl"></canvas>
     <script type="module" src="/main.js"></script>
   </body>
